@@ -1,0 +1,26 @@
+#Function to print characters
+#In decreasing order 
+#Of frequency
+frequency = {} 
+
+
+def most_frequent(word):                                          #Function definition
+    for i in word: 
+        if i in frequency: 
+            frequency[i] += 1                                      #Incrementing value by 1 for each occurence
+        else: 
+            frequency[i] = 1
+    return print("Frequency of characters in word is: "  +  str(frequency)) #Writing to Dictionary
+most_frequent("Mississippi")     #Function call
+
+
+sorted_frequency = dict(sorted(frequency.items(),reverse=True))          #Descending order
+print("Descending order frequency is: ",sorted_frequency)               #Printing in descending order
+
+
+
+
+
+#OUTPUT SCREEN
+Frequency of characters in word is: {'M': 1, 'i': 4, 's': 4, 'p': 2}
+Descending order frequency is:  {'s': 4, 'p': 2, 'i': 4, 'M': 1}
